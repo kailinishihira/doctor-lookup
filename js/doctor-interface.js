@@ -8,7 +8,6 @@ $(document).ready(function() {
     event.preventDefault();
     let illness = $('#illness').val();
     doctorModule.getDoctorByIllness(illness);
-
     $('#name').val("");
     $('#illness').val("");
     $('#results').empty();
@@ -24,5 +23,3 @@ $(document).ready(function() {
 
     });
   });
-
-  

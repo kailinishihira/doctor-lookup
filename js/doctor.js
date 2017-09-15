@@ -23,7 +23,6 @@ DoctorModule.prototype.getDoctorByIllness = function(illness) {
   promise.then(function(response) {
     let body = JSON.parse(response);
     let bodyData = body.data;
-    console.log(bodyData);
     if (bodyData.length === 0){
       $('#results').text("There are no doctors that meet your criteria.");
     } else {
@@ -64,7 +63,6 @@ DoctorModule.prototype.getDoctorByIllness = function(illness) {
     promise1.then(function(response) {
       let body = JSON.parse(response);
       let bodyData = body.data;
-      console.log(bodyData);
       if (bodyData.length === 0){
         $('#results').text("There are no doctors that meet your criteria.");
       } else {
