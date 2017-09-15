@@ -9,27 +9,44 @@
     <title>Doctor Lookup</title>
   </head>
   <body>
-    <h1>Seattle Area Doctor Lookup</h1>
+    <div class="container-fluid">
+      <h1>Seattle Area Doctor Lookup</h1>
 
-    <form id="illness-input">
-      <div class="form-group">
-        <label for="illness">Search by medical issue:</label>
-        <input id="illness" type="text">
-        <button class="btn-default" type="submit">Submit</button>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="well">
+            <form id="illness-input">
+              <div class="form-group">
+                <label for="illness">Search by keyword:</label>
+                <input id="illness" type="text">
+                <button class="btn btn-default" type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="well">
+            <form id="name-input">
+              <div class="form-group">
+                <label for="name">Search by doctor's name:</label>
+                <input id="name" type="text">
+                <button class="btn btn-default" type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-    </form>
 
-    <form id="name-input">
-      <div class="form-group">
-        <label for="name">Search by doctor's name:</label>
-        <input id="name" type="text">
-        <button class="btn-default" type="submit">Submit</button>
+
+      <div class="well list">
+
+        <h2>Recommended Doctors</h2>
+        <div id="results">
+
+        </div>
+        <p>Powered by <a href="https://developer.betterdoctor.com/" target="_blank">BetterDoctor</a></p>
       </div>
-    </form>
 
-    <div id="results">
-      
     </div>
-
   </body>
 </html>

@@ -1,0 +1,60 @@
+body {
+  margin-left: 5%;
+  margin-right: 5%;
+  color: #47494c;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  letter-spacing: 5px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+h2 {
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 2%;
+}
+
+form {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+button {
+  font-size: 12px;
+  margin-left: 2%;
+
+}
+
+.well {
+  margin-bottom: 4%;
+  background-color: #c9ced6;
+}
+
+#results {
+  text-align: center;
+}
+
+.labels {
+  font-weight: bold;
+}
+
+
+
+
+.list {
+  display: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  text-align: center;
+  margin-top: 4%;
+}
