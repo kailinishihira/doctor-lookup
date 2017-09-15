@@ -74,6 +74,7 @@ DoctorModule.prototype.getDoctorByIllness = function(illness) {
         $('#results').text("There are no doctors that meet your criteria.");
       } else {
         for(let i = 0; i < bodyData.length; i++) {
+
           $('#results').append(`<h4>${bodyData[i].profile.first_name} ${bodyData[i].profile.last_name}, ${bodyData[i].profile.title}</h4>`);
           $('#results').append(`<li>Address: ${bodyData[i].practices[0].visit_address.street} <br> ${bodyData[i].practices[0].visit_address.city}, ${bodyData[i].practices[0].visit_address.state}, ${bodyData[i].practices[0].visit_address.zip}</li>`);
           $('#results').append(`<li>Phone: ${bodyData[i].practices[0].phones[0].number}</li>`);
@@ -89,6 +90,7 @@ DoctorModule.prototype.getDoctorByIllness = function(illness) {
           } else {
             $('#results').append(`<li>Accepts new patients: No</li><br>`);
           }
+
         }
       }
 
@@ -96,7 +98,5 @@ DoctorModule.prototype.getDoctorByIllness = function(illness) {
         $('#results').text(`There was an error processing your request: ${error.message}`);
       });
     };
-
-
 
 exports.doctorModule = DoctorModule;

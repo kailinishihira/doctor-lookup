@@ -1,15 +1,23 @@
 body {
   margin-left: 5%;
   margin-right: 5%;
-  color: #47494c;
+}
+
+.jumbotron {
+  background-image: url("../img/banner.png");
+  background-position: right;
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 50px;
   text-align: center;
   letter-spacing: 5px;
   margin-top: 3%;
   margin-bottom: 3%;
+  background-color: #ffffff;
+  opacity: 0.9;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 
 h2 {
@@ -18,9 +26,13 @@ h2 {
   margin-bottom: 2%;
 }
 
+h4 {
+  margin-top: 2%;
+}
+
 form {
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 3px;
 }
 
