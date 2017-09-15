@@ -6,14 +6,14 @@
 
 ## Description
 
-_A website where a user may enter a medical issue into a form and receive a list of doctors in Seattle._
+_A website where a user may enter a medical issue into a form and receive a list of doctors in Seattle in a 20 mile radius._
 
 || Behavior  | Input  | Output  |
 |---|---|---|---|
-|| User may enter a medical issue to receive a list of doctors in the Seattle area that fit the search query. | Flu | Doctor's first and last name, address, phone number, website and if the doctor is accepting new patients.  |
-|| User may enter a name to receive a list of doctors in the Seattle area that fit the search query. | Smith | Doctor's first and last name, address, phone number, website and if the doctor is accepting new patients. |
+|| User may enter a medical issue to receive a list of doctors in the Seattle area that fit the search query. | Allergy | A list of doctors (10 max) including the following information: <br><li>Doctor's name</li><li>Address (address is the first listed practice if they have more than one practice)</li><li>Phone number (phone number is the first listed phone number if they have more than one phone number)</li><li>Website</li><li>Accepting new patients</li>  |
+|| User may enter a name to receive a list of doctors in the Seattle area that fit the search query. | Smith | A list of doctors (10 max) including the following information: <br><li>Doctor's name</li><li>Address (address is the first listed practice if they have more than one practice)</li><li>Phone number (phone number is the first listed phone number if they have more than one phone number)</li><li>Website</li><li>Accepting new patients</li> |
 || If the API call results in an error, the user will receive notification on what the error is. | ... | ... |
-|| If the user's request doesnot meet the search criteria, a notification will be received. |... | There are no doctors that meet your criteria. |
+|| If the user's request does not meet the search criteria, a notification will be received. | Search by doctor's name: Nishihira | There are no doctors that meet your criteria. |
 
 
 

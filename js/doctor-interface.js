@@ -35,16 +35,14 @@ $(document).ready(function() {
           $('#results').append(`<li>Name: ${bodyData[i].practices[0].name}</li>`);
           $('#results').append(`<li>Address: ${bodyData[i].practices[0].visit_address.street}, ${bodyData[i].practices[0].visit_address.city}, ${bodyData[i].practices[0].visit_address.state}, ${bodyData[i].practices[0].visit_address.zip}</li>`);
           $('#results').append(`<li>Phone: ${bodyData[i].practices[0].phones[0].number}</li>`);
-          $('#results').append(`<li>Accepts new patients: ${bodyData[i].practices[0].accepts_new_patients}</li><br>`);
+          if(`${bodyData[i].practices[0].accepts_new_patients} = true`) {
+            $('#results').append(`<li>Accepts new patients: Yes</li><br>`);
+          } else {
+            $('#results').append(`<li>Accepts new patients: No</li><br>`);
+          }
         }
       }
-
-      //doctor's can have multiple practies... in an array!!!
-      //Doctors first and last name
-      //address
-      //phone numbers are in an array - need another loop
-      //website - can't find!!!!
-      //accepting new patients
+      //unable to find any websites listed or website fields for any doctors 
 
       }, function(error) {
         $('#results').text(`There was an error processing your request: ${error.message}`);
@@ -59,7 +57,7 @@ $(document).ready(function() {
     $('#illness').val("");
     $('#results').empty();
 
-    let promise = new Promise(function(resolve, reject) {
+    let promise1 = new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
       let url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&location=47.6062%2C-122.3321%2C20&user_location=47.6062%2C-122.3321&sort=best-match-asc&skip=0&limit=10&user_key=${apiKey}`;
 
@@ -74,7 +72,7 @@ $(document).ready(function() {
       request.send();
     });
 
-    promise.then(function(response) {
+    promise1.then(function(response) {
       let body = JSON.parse(response);
       let bodyData = body.data;
       console.log(bodyData);
@@ -85,7 +83,11 @@ $(document).ready(function() {
           $('#results').append(`<li>Name: ${bodyData[i].practices[0].name}</li>`);
           $('#results').append(`<li>Address: ${bodyData[i].practices[0].visit_address.street}, ${bodyData[i].practices[0].visit_address.city}, ${bodyData[i].practices[0].visit_address.state}, ${bodyData[i].practices[0].visit_address.zip}</li>`);
           $('#results').append(`<li>Phone: ${bodyData[i].practices[0].phones[0].number}</li>`);
-          $('#results').append(`<li>Accepts new patients: ${bodyData[i].practices[0].accepts_new_patients}</li><br>`);
+          if(`${bodyData[i].practices[0].accepts_new_patients} = true`) {
+            $('#results').append(`<li>Accepts new patients: Yes</li><br>`);
+          } else {
+            $('#results').append(`<li>Accepts new patients: No</li><br>`);
+          }
         }
       }
 
