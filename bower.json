@@ -1,6 +1,6 @@
 {
-  "name": "meetup-dashboard",
-  "description": "## Initial set up of Boilerplate",
+  "name": "doctor-lookup",
+  "description": "find a doctor in Seattle",
   "main": "gulpfile.js",
   "license": "ISC",
   "homepage": "",
