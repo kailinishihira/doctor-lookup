@@ -36,6 +36,6 @@ _A website where a user may enter a medical issue into a form and receive a list
 
 ### License
 
-Copyright (c) 2017 **_Kaili Nishihira_**
+Copyright (c) 2018 **_Kaili Nishihira_**
 
 *Licensed under the [MIT License](https://opensource.org/licenses/MIT)*
